@@ -41,6 +41,10 @@ export const Demo = () => {
 								<span>{item.name}</span>
 								<br />
 								<span>{item.address}</span>
+								<br />
+								<span>{item.phone}</span>
+								<br/>
+								<span>{item.id}</span>
 							</div>
 							<button className="btn btn-danger" onClick={() => actions.deleteContact(index)}>
 								Eliminar
