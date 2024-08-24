@@ -83,6 +83,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 			},
 
+
+			addContact: (contact) => {
+				const myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				const raw = JSON.stringify({
+					name: contact.name,
+					phone: contact.phone,
+					email: contact.email,
+					address: contact.address
+				});
+
+				const requestOptions = {
+					method: "POST",
+					headers: myHeaders,
+					body: raw,
+					redirect: "follow"
+				};
+
+				fetch("https://playground.4geeks.com/contact/agendas/marypoppins/contacts", requestOptions)
+					.then((response) => response.text())
+					.then((result) => {
+						console.log(result);
+						// Recargar los contactos después de agregar el nuevo
+						getActions().loadSomeData();
+					})
+					.catch((error) => console.error("Error adding contact:", error));
+			},
+
+       
+
 			changeColor: (index, color) => {
 				const store = getStore();
 				const demo = store.demo.map((elm, i) => {
