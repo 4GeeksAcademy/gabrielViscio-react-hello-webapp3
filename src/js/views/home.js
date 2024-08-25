@@ -20,7 +20,7 @@ export const Home = () => {
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background || "white" }}>
 							<div className="d-flex justify-content-between">
-								<div className="">
+								<div className="" style={{margin:'auto',}}>
 									<img 
 										src={gatolentes} 
 										alt="Descripción de la imagen" 
@@ -33,11 +33,11 @@ export const Home = () => {
 										}} 
 									/>
 								</div>
-								<div>
-									<p>{item.name}</p>
-									<p><FontAwesomeIcon icon={faLocationDot} />{item.address}</p>
-									<p><FontAwesomeIcon icon={faPhoneFlip} />{item.phone}</p>
-									<p><FontAwesomeIcon icon={faEnvelope} />{item.email}</p>
+								<div style={{marginLeft:'25px',}}>
+									<p style={{fontSize:'26px'}}>{item.name}</p>
+									<p style={{color:'gray'}}><FontAwesomeIcon icon={faLocationDot} />   {item.address}</p>
+									<p style={{color:'gray'}}><FontAwesomeIcon icon={faPhoneFlip} />   {item.phone}</p>
+									<p style={{color:'gray'}}><FontAwesomeIcon icon={faEnvelope} />   {item.email}</p>
 								</div>
 							</div>
 							<div style={{marginRight:'20px', marginTop:'15px',}}>

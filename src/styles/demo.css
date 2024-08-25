@@ -1,0 +1,21 @@
+/* Estilo para todos los inputs y textareas */
+.form-control {
+    border-radius: 0.25rem; /* Bordes más redondeados */
+    border: 1px solid #ced4da; /* Color del borde */
+    padding: 0.375rem 0.75rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+    line-height: 1.5; /* Altura de línea */
+}
+
+/* Estilo para hacer que todos los inputs y textareas tengan el mismo tamaño */
+input.form-control, textarea.form-control {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+/* Opcional: Estilo para el botón */
+.btn-primary {
+    border-radius: 0.25rem; /* Bordes más redondeados */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+}

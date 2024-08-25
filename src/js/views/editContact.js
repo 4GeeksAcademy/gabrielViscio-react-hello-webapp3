@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/editContact.css";
+import { Link } from "react-router-dom";
 
 export const EditContact = () => {
     const { id } = useParams();
@@ -53,8 +54,11 @@ export const EditContact = () => {
                     <label htmlFor="address" className="form-label">Address</label>
                     <input className="form-control" id="address" name="address" value={contact.address} onChange={handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary">Save</button>
+                <button type="submit" className="btn btn-primary container-fluid">Save</button>
             </form>
+            <Link to="/">
+                <button className="btn btn-link text-dark">Or get back to Contacts</button>
+            </Link>
         </div>
     );
 };
