@@ -27,6 +27,9 @@ export const Home = () =>  {
 								<br/>
 								<span>{item.id}</span>
 							</div>
+							<Link to={`/editContact/${item.id}`}>
+								<button className="btn btn-primary">Edit</button>
+							</Link>	
 							<button className="btn btn-danger" onClick={() => actions.deleteContact(index)}>
 								Eliminar
 							</button>
