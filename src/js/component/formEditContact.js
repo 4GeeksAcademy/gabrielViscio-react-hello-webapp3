@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
-export const Demo = () => {
+export const editContact = () => {
 	const { store, actions } = useContext(Context);
 	const [contact, setContact] = useState({
 		name: "",
@@ -22,7 +22,6 @@ export const Demo = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		actions.addContact(contact);
-		window.history.back();
 	};
 
 	return (
@@ -44,7 +43,9 @@ export const Demo = () => {
 					<label htmlFor="address" className="form-label">Address</label>
 					<textarea className="form-control" id="address" name="address" rows="3" onChange={handleChange} />
 				</div>
+                <Link to="/">
 				<button type="submit" className="btn btn-primary">Save</button>
+                </Link>
 			</form>
 			<Link to="/">
 				<button className="btn btn-primary">or get back to Contacts</button>
